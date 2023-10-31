@@ -30,6 +30,8 @@ public class Battalion {
             characters.remove(first);
             characters.remove(second);
         }
+
+        return true;
     }
 
 }
