@@ -5,8 +5,8 @@ public class Battalion {
 
     private List<Character> characters = new ArrayList<>();
 
-    public void add(List<Character> characters) {
-        this.characters.addAll(characters);
+    public void add(Character... characters) {
+        this.characters.addAll(List.of(characters));
     }
 
     public void display() {
