@@ -77,7 +77,15 @@ public abstract class Character implements Movable, Comparable<Character> {
                 return -1;
             else
                 return 1;
-        }
+        }  else if(this instanceof Warrior && character instanceof Mage){
+            if(this.capacity < character.capacity * character.capacity)
+                return -1;
+            else
+                return 1;
+        } else if(this.capacity < character.capacity)
+            return -1;
+        else if(this.capacity > character.capacity)
+            return 1;
 
         return 0;
     }
