@@ -15,8 +15,21 @@ public class Battalion {
         }
     }
 
-    public void fight(){
+    public boolean fight(){
+        if(characters.size() < 2)
+            return false;
 
+        Character first = characters.get(0);
+        Character second = characters.get(1);
+        int compare = first.compareTo(second);
+        if(compare > 0){
+            characters.remove(second);
+        } else if(compare < 0) {
+            characters.remove(first);
+        } else {
+            characters.remove(first);
+            characters.remove(second);
+        }
     }
 
 }
