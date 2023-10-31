@@ -1,12 +1,16 @@
 public class Warrior extends Character {
 
-    public Warrior(String name) {
-        super(name, "Warrior");
+    public Warrior(String name, int capacity){
+        super(name, "Warrior", capacity);
         life = 100;
         strength = 10;
         agility = 8;
         wit = 3;
         System.out.println(name + ": My name will go down in history!");
+    }
+
+    public Warrior(String name) {
+        this(name, 0);
     }
 
     @Override

@@ -1,12 +1,16 @@
 public class Mage extends Character {
 
-    public Mage(String name){
-        super(name, "Mage");
+    public Mage(String name, int power) {
+        super(name, "Mage", power);
         life = 70;
         strength = 3;
         agility = 10;
         wit = 10;
         System.out.println(name + ": May the gods be with me.");
+    }
+
+    public Mage(String name){
+        this(name, 0);
     }
 
     @Override
