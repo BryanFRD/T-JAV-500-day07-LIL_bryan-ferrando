@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Battalion {
 
-    List<Character> characters = new ArrayList<>();
+    private List<Character> characters = new ArrayList<>();
 
     public void add(List<Character> characters) {
         this.characters.addAll(characters);
@@ -13,6 +13,10 @@ public class Battalion {
         for (Character character : characters) {
             System.out.println(character.getName());
         }
+    }
+
+    public void fight(){
+
     }
 
 }
